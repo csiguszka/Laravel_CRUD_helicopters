@@ -47,7 +47,10 @@
                 </div>
             @enderror
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <a href="{{ route('helicopters.index') }}" class="btn btn-secondary">Back</a>
+        </div>
     </form>
 
 </x-layout>

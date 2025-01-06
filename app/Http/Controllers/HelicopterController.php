@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreBookRequest;
+use App\Http\Requests\StoreHelicopterRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class BookController extends Controller
+class HelicopterController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,7 +31,7 @@ class BookController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreBookRequest $request)
+    public function store(StoreHelicopterRequest $request)
     {
         $validated = $request->validated();
         if (DB::table('helicopters')->insert($validated)) {
@@ -71,7 +71,7 @@ class BookController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(StoreBookRequest $request, string $id)
+    public function update(StoreHelicopterRequest $request, string $id)
     {
         $validated = $request->validated();
         DB::table('helicopters')
